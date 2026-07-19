@@ -1,6 +1,7 @@
 // Translations
 const translations = {
     ro: {
+        'nav.home': 'Acasă',
         'hero.title': 'Construim Viitorul, Transformăm Prezentul',
         'hero.subtitle': 'Specializați în renovări premium, hidroizolații și instalații sanitare, finisaje interioare de excepție',
         'hero.cta1': 'Solicită Consultație',
@@ -68,6 +69,7 @@ const translations = {
         'footer.rights': 'Toate drepturile rezervate.'
     },
     en: {
+        'nav.home': 'Home',
         'hero.title': 'Building the Future, Transforming the Present',
         'hero.subtitle': 'Specialized in premium renovations, waterproofing and plumbing installations, exceptional interior finishes',
         'hero.cta1': 'Request Consultation',
@@ -391,11 +393,17 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     });
 });
 
-// Load preferred language from localStorage
+// Load preferred language: ?lang= URL param (from /en or /ro entry points) wins
+// and is persisted, otherwise fall back to the last language saved in localStorage.
 window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'ro';
-    if (savedLang !== 'ro') {
-        switchLanguage(savedLang);
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang === 'en' || urlLang === 'ro') {
+        switchLanguage(urlLang);
+    } else {
+        const savedLang = localStorage.getItem('preferredLanguage') || 'ro';
+        if (savedLang !== 'ro') {
+            switchLanguage(savedLang);
+        }
     }
 
     // Initialize active nav on load
