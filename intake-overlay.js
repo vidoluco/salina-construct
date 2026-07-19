@@ -186,21 +186,23 @@ function buildFormFields() {
       <label class="intake-label">${q.label}</label>`;
 
     if (q.type === 'radio') {
-      html += `<div class="intake-options">` +
-        q.options.map(opt =>
-          `<label class="intake-option">
-            <input type="radio" name="${q.id}" value="${opt}">
+      html += `<div class="intake-options" role="radiogroup" aria-label="${q.label}">` +
+        q.options.map((opt, i) => {
+          const optId = `${q.id}_${i}`;
+          return `<label class="intake-option" for="${optId}">
+            <input type="radio" id="${optId}" name="${q.id}" value="${opt}">
             <span>${opt}</span>
-          </label>`
-        ).join('') + `</div>`;
+          </label>`;
+        }).join('') + `</div>`;
     } else if (q.type === 'checkbox') {
-      html += `<div class="intake-options">` +
-        q.options.map(opt =>
-          `<label class="intake-option">
-            <input type="checkbox" name="${q.id}" value="${opt}">
+      html += `<div class="intake-options" role="group" aria-label="${q.label}">` +
+        q.options.map((opt, i) => {
+          const optId = `${q.id}_${i}`;
+          return `<label class="intake-option" for="${optId}">
+            <input type="checkbox" id="${optId}" name="${q.id}" value="${opt}">
             <span>${opt}</span>
-          </label>`
-        ).join('') + `</div>`;
+          </label>`;
+        }).join('') + `</div>`;
     } else if (q.type === 'textarea') {
       html += `<textarea name="${q.id}" class="intake-input" placeholder="${q.placeholder || ''}" rows="3"></textarea>`;
     } else {

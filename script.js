@@ -2,7 +2,7 @@
 const translations = {
     ro: {
         'hero.title': 'Construim Viitorul, Transformăm Prezentul',
-        'hero.subtitle': 'Specializați în renovări premium, instalații electrice și sanitare, finisaje interioare de excepție',
+        'hero.subtitle': 'Specializați în renovări premium, hidroizolații și instalații sanitare, finisaje interioare de excepție',
         'hero.cta1': 'Solicită Consultație',
         'hero.cta2': 'Vezi Proiectele Noastre',
         'services.title': 'Serviciile Noastre',
@@ -11,8 +11,8 @@ const translations = {
         'services.item1.desc': 'Transformăm spații vechi în locuințe moderne și funcționale, cu atenție la fiecare detaliu.',
         'services.item2.title': 'Finisaje Interioare',
         'services.item2.desc': 'Finisaje premium pentru pereți, podele, tavane - de la gresie și faianță la parchet și tencuieli decorative.',
-        'services.item3.title': 'Instalații Electrice',
-        'services.item3.desc': 'Proiectare și execuție instalații electrice conforme cu normele în vigoare, de la tablouri la automatizări.',
+        'services.item3.title': 'Hidroizolații',
+        'services.item3.desc': 'Hidroizolații complete pentru băi, terase, subsoluri și fundații - protecție eficientă împotriva umidității și infiltrațiilor.',
         'services.item4.title': 'Instalații Sanitare',
         'services.item4.desc': 'Sisteme complete de apă și canalizare, instalații termice, centrale, boilere și climatizare.',
         'services.item5.title': 'Instalații Acoperișuri',
@@ -25,8 +25,18 @@ const translations = {
         'portfolio.filter.all': 'Toate',
         'portfolio.filter.renovation': 'Renovări',
         'portfolio.filter.interior': 'Finisaje',
-        'portfolio.filter.electrical': 'Electrice',
         'portfolio.filter.plumbing': 'Sanitare',
+        'nav.gallery': 'Galerie',
+        'gallery.title': 'Galeria Completă a Proiectelor',
+        'gallery.subtitle': 'Peste 130 de fotografii reale din proiectele Salinas Construct - șantiere, faze de lucru și finisaje finalizate',
+        'gallery.filter.all': 'Toate',
+        'gallery.filter.bucatarii': 'Bucătării',
+        'gallery.filter.dormitoare': 'Dormitoare',
+        'gallery.filter.dressinguri': 'Dressinguri',
+        'gallery.filter.coridoare': 'Coridoare',
+        'gallery.filter.bai': 'Băi',
+        'gallery.filter.santier': 'Șantier',
+        'gallery.filter.demolari': 'Înainte de Renovare',
         'about.title': 'Despre Salinas Construct',
         'about.intro': 'Suntem o echipă de profesioniști dedicați transformării spațiilor în locuințe moderne, funcționale și de calitate superioară.',
         'about.mission': 'Cu experiență vastă în domeniul construcțiilor și renovărilor, oferim servicii complete - de la proiectare la finisare, cu accent pe calitate, punctualitate și satisfacția clientului.',
@@ -34,15 +44,15 @@ const translations = {
         'about.stat2': 'Ani Experiență',
         'about.stat3': 'Clienți Mulțumiți',
         'about.team.title': 'Echipa Noastră',
-        'cert.title': 'Certificări și Parteneri',
-        'cert.subtitle': 'Calitate garantată prin certificări și colaborări de prestigiu',
-        'cert.iso': 'Sistem Management Calitate',
-        'cert.anre': 'Autorizație Instalații Electrice',
-        'cert.iscir': 'Instalații Termice Certificate',
-        'cert.premium': 'Materiale de Construcție',
+        'about.team.subtitle': 'O afacere de familie, condusă cu pasiune și implicare directă în fiecare proiect',
+        'about.team.razvan.role': 'Fondator & Director General',
+        'about.team.solomon.role': 'Asociat',
+        'about.team.filip.role': 'Asociat',
+        'cert.marginal': 'Materiale de construcție premium, de la parteneri verificați.',
         'blog.title': 'Blog & Știri',
         'blog.subtitle': 'Ultimele proiecte, tendințe și sfaturi din domeniul construcțiilor',
         'blog.readmore': 'Citește mai mult →',
+        'blog.comingsoon': 'În curând',
         'contact.title': 'Contactați-ne',
         'contact.subtitle': 'Suntem aici pentru a transforma visul dumneavoastră în realitate',
         'contact.form.name': 'Numele Dumneavoastră',
@@ -59,7 +69,7 @@ const translations = {
     },
     en: {
         'hero.title': 'Building the Future, Transforming the Present',
-        'hero.subtitle': 'Specialized in premium renovations, electrical and plumbing installations, exceptional interior finishes',
+        'hero.subtitle': 'Specialized in premium renovations, waterproofing and plumbing installations, exceptional interior finishes',
         'hero.cta1': 'Request Consultation',
         'hero.cta2': 'View Our Projects',
         'services.title': 'Our Services',
@@ -68,8 +78,8 @@ const translations = {
         'services.item1.desc': 'We transform old spaces into modern and functional homes, with attention to every detail.',
         'services.item2.title': 'Interior Finishes',
         'services.item2.desc': 'Premium finishes for walls, floors, ceilings - from tiles and ceramics to parquet and decorative plasters.',
-        'services.item3.title': 'Electrical Installations',
-        'services.item3.desc': 'Design and execution of electrical installations compliant with current standards, from panels to automation.',
+        'services.item3.title': 'Waterproofing',
+        'services.item3.desc': 'Complete waterproofing for bathrooms, terraces, basements and foundations - effective protection against moisture and water infiltration.',
         'services.item4.title': 'Plumbing Installations',
         'services.item4.desc': 'Complete water and drainage systems, heating installations, boilers, water heaters and air conditioning.',
         'services.item5.title': 'Roofing Installations',
@@ -82,8 +92,18 @@ const translations = {
         'portfolio.filter.all': 'All',
         'portfolio.filter.renovation': 'Renovations',
         'portfolio.filter.interior': 'Finishes',
-        'portfolio.filter.electrical': 'Electrical',
         'portfolio.filter.plumbing': 'Plumbing',
+        'nav.gallery': 'Gallery',
+        'gallery.title': 'Complete Project Gallery',
+        'gallery.subtitle': 'Over 130 real photos from Salinas Construct projects - job sites, work in progress and finished results',
+        'gallery.filter.all': 'All',
+        'gallery.filter.bucatarii': 'Kitchens',
+        'gallery.filter.dormitoare': 'Bedrooms',
+        'gallery.filter.dressinguri': 'Walk-in Closets',
+        'gallery.filter.coridoare': 'Hallways',
+        'gallery.filter.bai': 'Bathrooms',
+        'gallery.filter.santier': 'Job Site',
+        'gallery.filter.demolari': 'Before Renovation',
         'about.title': 'About Salinas Construct',
         'about.intro': 'We are a team of professionals dedicated to transforming spaces into modern, functional and superior quality homes.',
         'about.mission': 'With extensive experience in construction and renovations, we offer complete services - from design to finishing, with emphasis on quality, punctuality and customer satisfaction.',
@@ -91,15 +111,15 @@ const translations = {
         'about.stat2': 'Years Experience',
         'about.stat3': 'Satisfied Clients',
         'about.team.title': 'Our Team',
-        'cert.title': 'Certifications & Partners',
-        'cert.subtitle': 'Quality guaranteed through certifications and prestigious collaborations',
-        'cert.iso': 'Quality Management System',
-        'cert.anre': 'Electrical Installations Authorization',
-        'cert.iscir': 'Certified Thermal Installations',
-        'cert.premium': 'Construction Materials',
+        'about.team.subtitle': 'A family business, run with passion and hands-on involvement in every project',
+        'about.team.razvan.role': 'Founder & CEO',
+        'about.team.solomon.role': 'Partner',
+        'about.team.filip.role': 'Partner',
+        'cert.marginal': 'Premium construction materials, from verified partners.',
         'blog.title': 'Blog & News',
         'blog.subtitle': 'Latest projects, trends and tips from the construction industry',
         'blog.readmore': 'Read more →',
+        'blog.comingsoon': 'Coming soon',
         'contact.title': 'Contact Us',
         'contact.subtitle': 'We are here to transform your dream into reality',
         'contact.form.name': 'Your Name',
@@ -327,25 +347,40 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// Before/After Image Toggle (placeholder functionality)
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const container = btn.closest('.portfolio-image-container');
-        const image = container.querySelector('.portfolio-image');
+// Before/After Image Toggle
+// Wires up .before-after-toggle groups (each holding two-or-more .toggle-btn
+// buttons with data-state="<state>") to swap the sibling .portfolio-image's
+// src/alt via the image's data-<state>-src/data-<state>-alt attributes. Only
+// portfolio cards with a verified renovation-stage photo sequence render this markup.
+document.querySelectorAll('.before-after-toggle').forEach(toggleGroup => {
+    const container = toggleGroup.closest('.portfolio-image-container');
+    const image = container ? container.querySelector('.portfolio-image') : null;
+    const buttons = toggleGroup.querySelectorAll('.toggle-btn');
 
-        // Toggle placeholder text (in real implementation, this would switch images)
-        const placeholderText = image.querySelector('.placeholder-text span');
-        if (placeholderText.textContent.includes('Proiect')) {
-            placeholderText.textContent = 'Înainte';
-            btn.textContent = 'Vezi După';
-        } else if (placeholderText.textContent === 'Înainte') {
-            placeholderText.textContent = 'După';
-            btn.textContent = 'Vezi Înainte';
-        } else {
-            placeholderText.textContent = 'Imagine Proiect';
-            btn.textContent = 'Înainte / După';
-        }
+    if (!image || buttons.length === 0) return;
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const state = btn.dataset.state; // 'before' | 'progres' | 'after'
+            const nextSrc = image.dataset[state + 'Src'];
+            const nextAlt = image.dataset[state + 'Alt'];
+
+            if (!nextSrc || btn.classList.contains('active')) return;
+
+            // Fade out, swap source, fade back in
+            image.style.opacity = '0';
+            window.setTimeout(() => {
+                image.src = nextSrc;
+                if (nextAlt) image.alt = nextAlt;
+                image.style.opacity = '1';
+            }, 200);
+
+            buttons.forEach(b => {
+                const isActive = b === btn;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-pressed', String(isActive));
+            });
+        });
     });
 });
 
@@ -371,7 +406,9 @@ window.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href.length <= 1) return; // bare "#" placeholder link, nothing to scroll to
+        const target = document.querySelector(href);
         if (target) {
             const navbarHeight = navbar.offsetHeight;
             const targetPosition = target.offsetTop - navbarHeight;
@@ -408,7 +445,7 @@ const serviceData = {
             description: 'Echipa noastră de specialiști oferă servicii complete de renovare, de la demolări controlate până la finisaje premium. Ne ocupăm de toate aspectele proiectului dumneavoastră.',
             features: [
                 'Demol ări controlate și pregătire spațiu',
-                'Refacere instalații electrice și sanitare',
+                'Refacere instalații sanitare și hidroizolații',
                 'Compartimentări noi și modernizare spații',
                 'Tâmplărie interioară (uși, ferestre, lambriuri)',
                 'Finisaje complete (gresie, faianță, parchet, zugrăveli)',
@@ -423,7 +460,7 @@ const serviceData = {
             description: 'Our team of specialists offers complete renovation services, from controlled demolitions to premium finishes. We handle all aspects of your project.',
             features: [
                 'Controlled demolitions and space preparation',
-                'Electrical and plumbing system renovation',
+                'Plumbing system renovation and waterproofing',
                 'New partitions and space modernization',
                 'Interior carpentry (doors, windows, paneling)',
                 'Complete finishes (tiles, ceramics, parquet, painting)',
@@ -470,40 +507,39 @@ const serviceData = {
             ]
         }
     },
-    electrical: {
+    waterproofing: {
         images: [
-            { src: 'assets/photos/santier/img_085.jpeg', alt: 'Canale de cabluri electrice în pereți de rigips' },
-            { src: 'assets/photos/before-demolari/img_095.jpeg', alt: 'Instalație electrică expusă în fază de reconstrucție' },
-            { src: 'assets/photos/santier/img_065.jpeg', alt: 'Pregătire instalații și finisaje în cameră' }
+            { src: 'assets/photos/santier/img_085.jpeg', alt: 'Hidroizolație aplicată pe pereți - pregătire baie înainte de faianță' },
+            { src: 'assets/photos/before-demolari/img_095.jpeg', alt: 'Placă hidrofugă montată în zonă umedă, pregătire pentru hidroizolație' }
         ],
         ro: {
-            title: 'Instalații Electrice Certificate',
-            subtitle: 'Siguranță și eficiență pentru sistemele electrice',
-            description: 'Executăm instalații electrice complete, conforme cu normativele în vigoare, de la proiectare până la punere în funcțiune și autorizare.',
+            title: 'Hidroizolații Profesionale',
+            subtitle: 'Protecție completă împotriva umidității și infiltrațiilor',
+            description: 'Executăm hidroizolații complete pentru băi, bucătării, terase, subsoluri și fundații, folosind membrane și materiale certificate, aplicate conform normativelor în vigoare.',
             features: [
-                'Proiectare instalații electrice',
-                'Tablouri electrice și automatizări',
-                'Cablaj electric structural și aparent',
-                'Prize, întrerupătoare, prize USB integrate',
-                'Iluminat interior și exterior LED',
-                'Sisteme smart home și automatizare',
-                'Panouri fotovoltaice și stații de încărcare EV',
-                'Certificare ANRE și documentație completă'
+                'Hidroizolații băi și bucătării înainte de faianță',
+                'Hidroizolații terase și balcoane',
+                'Hidroizolații subsoluri și fundații',
+                'Membrane lichide și bituminoase',
+                'Plăci hidrofuge pentru zone umede',
+                'Tratamente anti-igrasie și anti-mucegai',
+                'Verificare etanșeitate înainte de finisare',
+                'Garanție scrisă pentru lucrările executate'
             ]
         },
         en: {
-            title: 'Certified Electrical Installations',
-            subtitle: 'Safety and efficiency for electrical systems',
-            description: 'We execute complete electrical installations, compliant with current regulations, from design to commissioning and authorization.',
+            title: 'Professional Waterproofing',
+            subtitle: 'Complete protection against moisture and water infiltration',
+            description: 'We execute complete waterproofing for bathrooms, kitchens, terraces, basements and foundations, using certified membranes and materials, applied in compliance with current regulations.',
             features: [
-                'Electrical installation design',
-                'Electrical panels and automation',
-                'Structural and exposed electrical wiring',
-                'Sockets, switches, integrated USB outlets',
-                'Interior and exterior LED lighting',
-                'Smart home systems and automation',
-                'Photovoltaic panels and EV charging stations',
-                'ANRE certification and complete documentation'
+                'Bathroom and kitchen waterproofing before tiling',
+                'Terrace and balcony waterproofing',
+                'Basement and foundation waterproofing',
+                'Liquid and bituminous membranes',
+                'Moisture-resistant boards for wet areas',
+                'Anti-damp and anti-mold treatments',
+                'Water-tightness check before finishing',
+                'Written warranty on completed work'
             ]
         }
     },
@@ -697,6 +733,144 @@ document.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeServiceModal();
+    }
+});
+
+// ===== Gallery Section (all real project photos) =====
+// This is a separate feature from the curated Portfolio filter above. It uses its
+// own classes/attributes (.gallery-filter-btn, .gallery-item, data-gallery-category,
+// data-gallery-filter) so it can never collide with the .filter-btn/.portfolio-item
+// logic wired earlier in this file.
+const galleryFilterButtons = document.querySelectorAll('.gallery-filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let currentGalleryFilter = 'all';
+
+function applyGalleryFilter(filter) {
+    currentGalleryFilter = filter;
+
+    galleryItems.forEach(item => {
+        const category = item.dataset.galleryCategory;
+
+        if (filter === 'all' || category === filter) {
+            item.style.display = '';
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'scale(1)';
+            }, 10);
+        } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                item.style.display = 'none';
+            }, 300);
+        }
+    });
+}
+
+galleryFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        galleryFilterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        applyGalleryFilter(button.dataset.galleryFilter);
+    });
+});
+
+// ----- Gallery Lightbox -----
+// A distinct overlay/id (#galleryLightbox) from the existing #serviceModal, built with
+// the same overlay/ESC/outside-click pattern as openServiceModal()/closeServiceModal()
+// below, plus Prev/Next navigation that stays within the currently active gallery filter.
+const galleryLightbox = document.getElementById('galleryLightbox');
+const galleryLightboxImage = document.getElementById('galleryLightboxImage');
+const galleryLightboxCounter = document.getElementById('galleryLightboxCounter');
+const galleryLightboxClose = document.getElementById('galleryLightboxClose');
+const galleryLightboxPrev = document.getElementById('galleryLightboxPrev');
+const galleryLightboxNext = document.getElementById('galleryLightboxNext');
+
+let galleryLightboxIndex = -1;
+
+// Recomputed on every open/nav so it always reflects the currently active filter,
+// rather than relying on inline display:none which is set on a delay during the
+// filter transition above.
+function getVisibleGalleryItems() {
+    return Array.from(galleryItems).filter(item => (
+        currentGalleryFilter === 'all' || item.dataset.galleryCategory === currentGalleryFilter
+    ));
+}
+
+function renderGalleryLightbox() {
+    const visibleItems = getVisibleGalleryItems();
+    if (visibleItems.length === 0) return;
+
+    if (galleryLightboxIndex < 0) galleryLightboxIndex = visibleItems.length - 1;
+    if (galleryLightboxIndex >= visibleItems.length) galleryLightboxIndex = 0;
+
+    const item = visibleItems[galleryLightboxIndex];
+    const img = item.querySelector('.gallery-image');
+    if (!img) return;
+
+    galleryLightboxImage.src = img.dataset.full;
+    galleryLightboxImage.alt = img.alt;
+    galleryLightboxCounter.textContent = `${galleryLightboxIndex + 1} / ${visibleItems.length}`;
+}
+
+function openGalleryLightbox(item) {
+    const visibleItems = getVisibleGalleryItems();
+    const index = visibleItems.indexOf(item);
+    if (index === -1) return;
+
+    galleryLightboxIndex = index;
+    renderGalleryLightbox();
+    galleryLightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGalleryLightbox() {
+    galleryLightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function showNextGalleryImage() {
+    const visibleItems = getVisibleGalleryItems();
+    if (visibleItems.length === 0) return;
+    galleryLightboxIndex = (galleryLightboxIndex + 1) % visibleItems.length;
+    renderGalleryLightbox();
+}
+
+function showPrevGalleryImage() {
+    const visibleItems = getVisibleGalleryItems();
+    if (visibleItems.length === 0) return;
+    galleryLightboxIndex = (galleryLightboxIndex - 1 + visibleItems.length) % visibleItems.length;
+    renderGalleryLightbox();
+}
+
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => openGalleryLightbox(item));
+});
+
+if (galleryLightboxClose) galleryLightboxClose.addEventListener('click', closeGalleryLightbox);
+if (galleryLightboxNext) galleryLightboxNext.addEventListener('click', showNextGalleryImage);
+if (galleryLightboxPrev) galleryLightboxPrev.addEventListener('click', showPrevGalleryImage);
+
+// Close gallery lightbox on outside click (click on the overlay itself, not its content)
+if (galleryLightbox) {
+    galleryLightbox.addEventListener('click', (e) => {
+        if (e.target === galleryLightbox) {
+            closeGalleryLightbox();
+        }
+    });
+}
+
+// Keyboard support: ESC closes, arrow keys navigate - only while the lightbox is open,
+// so this never interferes with the #serviceModal ESC handler above.
+document.addEventListener('keydown', (e) => {
+    if (!galleryLightbox || !galleryLightbox.classList.contains('active')) return;
+
+    if (e.key === 'Escape') {
+        closeGalleryLightbox();
+    } else if (e.key === 'ArrowRight') {
+        showNextGalleryImage();
+    } else if (e.key === 'ArrowLeft') {
+        showPrevGalleryImage();
     }
 });
 

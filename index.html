@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Salinas Construct SRL - Companie de construcții specializată în renovări, instalații electrice, sanitare și finisaje interioare de calitate superioară.">
+    <meta name="description" content="Salinas Construct SRL - Companie de construcții specializată în renovări, hidroizolații, instalații sanitare și finisaje interioare de calitate superioară.">
     <title>Salinas Construct SRL | Construcții & Renovări Premium</title>
+    <link rel="icon" type="image/png" href="assets/identity-transparent.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#home" class="logo">
-                <img src="assets/identity.png" alt="Salinas Construct - Buildings, Concrete & Structures" class="logo-image">
+                <img src="assets/identity-transparent.png" alt="Salinas Construct SRL" class="logo-image">
             </a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
                 <span></span>
@@ -26,8 +27,8 @@
                 <li><a href="#home" class="nav-link active">Acasă</a></li>
                 <li><a href="#services" class="nav-link">Servicii</a></li>
                 <li><a href="#portfolio" class="nav-link">Portofoliu</a></li>
+                <li><a href="#gallery" class="nav-link" data-lang-key="nav.gallery">Galerie</a></li>
                 <li><a href="#about" class="nav-link">Despre Noi</a></li>
-                <li><a href="#certifications" class="nav-link">Certificări</a></li>
                 <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="lang-switcher">
@@ -43,7 +44,7 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h2 class="hero-title" data-lang-key="hero.title">Construim Viitorul, Transformăm Prezentul</h2>
-            <p class="hero-subtitle" data-lang-key="hero.subtitle">Specializați în renovări premium, instalații electrice și sanitare, finisaje interioare de excepție</p>
+            <p class="hero-subtitle" data-lang-key="hero.subtitle">Specializați în renovări premium, hidroizolații și instalații sanitare, finisaje interioare de excepție</p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary" data-lang-key="hero.cta1" onclick="openIntake(); return false;">Solicită Consultație</a>
                 <a href="#portfolio" class="btn btn-secondary" data-lang-key="hero.cta2">Vezi Proiectele Noastre</a>
@@ -95,14 +96,14 @@
                         </svg>
                     </button>
                 </div>
-                <div class="service-card" data-service="electrical" onclick="openServiceModal('electrical')">
+                <div class="service-card" data-service="waterproofing" onclick="openServiceModal('waterproofing')">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            <path d="M12 2.69s5.66 6.13 5.66 10.31A5.66 5.66 0 0 1 12 18.66a5.66 5.66 0 0 1-5.66-5.66C6.34 8.82 12 2.69 12 2.69z"></path>
                         </svg>
                     </div>
-                    <h3 data-lang-key="services.item3.title">Instalații Electrice</h3>
-                    <p data-lang-key="services.item3.desc">Proiectare și execuție instalații electrice conforme cu normele în vigoare, de la tablouri la automatizări.</p>
+                    <h3 data-lang-key="services.item3.title">Hidroizolații</h3>
+                    <p data-lang-key="services.item3.desc">Hidroizolații complete pentru băi, terase, subsoluri și fundații - protecție eficientă împotriva umidității și infiltrațiilor.</p>
                     <button class="service-learn-more">
                         <span data-lang-key="services.learnmore">Detalii Complete</span>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -170,13 +171,15 @@
             <div class="section-header">
                 <h2 class="section-title" data-lang-key="portfolio.title">Portofoliul Nostru</h2>
                 <p class="section-subtitle" data-lang-key="portfolio.subtitle">Proiecte finalizate cu succes - înainte și după</p>
+                <!-- Note: only the "Finisaje Baie Luxury" card below currently has a verified before/after photo pair;
+                     the other cards show a single finished photo until matching before shots are confirmed. -->
             </div>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all" data-lang-key="portfolio.filter.all">Toate</button>
                 <button class="filter-btn" data-filter="renovation" data-lang-key="portfolio.filter.renovation">Renovări</button>
                 <button class="filter-btn" data-filter="interior" data-lang-key="portfolio.filter.interior">Finisaje</button>
-                <button class="filter-btn" data-filter="electrical" data-lang-key="portfolio.filter.electrical">Electrice</button>
                 <button class="filter-btn" data-filter="plumbing" data-lang-key="portfolio.filter.plumbing">Sanitare</button>
+                <!-- no roofing portfolio item exists yet; add filter button once a project photo is available -->
             </div>
             <div class="portfolio-grid">
                 <!-- Project 1 - Renovare Apartament Modern -->
@@ -192,26 +195,34 @@
                 </div>
 
                 <!-- Project 2 - Finisaje Baie Luxury -->
+                <!-- Verified 3-stage sequence, all genuinely the same bathroom (same window, same toilet position):
+                     before-demolari/img_095.jpeg (demolition/rough plumbing) -> santier/img_085.jpeg (sanitary
+                     install + waterproofing render, pre-tile) -> the finished tiled result below. This used to be
+                     split across two mismatched cards (one mislabeled "Instalație Electrică") - merged into one
+                     honest before/progress/after story instead. -->
                 <div class="portfolio-item" data-category="interior">
                     <div class="portfolio-image-container">
-                        <img src="assets/photos/finisaje-after/bai/img_005.jpeg" alt="Baie modernă - faianță neagră și albă, oglindă LED" class="portfolio-image" loading="lazy">
+                        <img src="assets/photos/finisaje-after/bai/img_005.jpeg"
+                             data-before-src="assets/photos/before-demolari/img_095.jpeg"
+                             data-progres-src="assets/photos/santier/img_085.jpeg"
+                             data-after-src="assets/photos/finisaje-after/bai/img_005.jpeg"
+                             data-before-alt="Baie înainte de renovare - pereți decopertați și instalație sanitară în lucru"
+                             data-progres-alt="Baie în lucru - instalație sanitară și hidroizolație aplicată, pregătită pentru faianță"
+                             data-after-alt="Baie modernă - faianță neagră și albă, oglindă LED"
+                             alt="Baie modernă - faianță neagră și albă, oglindă LED"
+                             class="portfolio-image"
+                             loading="lazy"
+                             style="transition: opacity 0.25s ease;">
+                        <div class="before-after-toggle" role="group" aria-label="Comparație stadii renovare">
+                            <button type="button" class="toggle-btn" data-state="before" aria-pressed="false">Înainte</button>
+                            <button type="button" class="toggle-btn" data-state="progres" aria-pressed="false">Progres</button>
+                            <button type="button" class="toggle-btn active" data-state="after" aria-pressed="true">După</button>
+                        </div>
                     </div>
                     <div class="portfolio-info">
                         <h3>Finisaje Baie Luxury</h3>
-                        <p>Faianță premium bicromă, oglindă LED, mobilier suspendat și iluminat ambiental</p>
+                        <p>De la demolare la instalații sanitare, hidroizolație și faianță premium bicromă, cu oglindă LED și mobilier suspendat</p>
                         <span class="project-tag">Finisaje</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 - Instalație Electrică -->
-                <div class="portfolio-item" data-category="electrical">
-                    <div class="portfolio-image-container">
-                        <img src="assets/photos/santier/img_085.jpeg" alt="Instalație electrică - canale și prize în pereți" class="portfolio-image" loading="lazy">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Instalație Electrică Completă</h3>
-                        <p>Recablare integrală apartament - circuite noi, prize și întrerupătoare premium</p>
-                        <span class="project-tag">Electrice</span>
                     </div>
                 </div>
 
@@ -254,6 +265,445 @@
         </div>
     </section>
 
+    <!-- Gallery Section: full showcase of all real project photos (139), separate from the curated Portfolio above -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="gallery.title">Galeria Completă a Proiectelor</h2>
+                <p class="section-subtitle" data-lang-key="gallery.subtitle">Peste 130 de fotografii reale din proiectele Salinas Construct - șantiere, faze de lucru și finisaje finalizate</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" data-gallery-filter="all" data-lang-key="gallery.filter.all">Toate</button>
+                <button class="gallery-filter-btn" data-gallery-filter="bucatarii" data-lang-key="gallery.filter.bucatarii">Bucătării</button>
+                <button class="gallery-filter-btn" data-gallery-filter="dormitoare" data-lang-key="gallery.filter.dormitoare">Dormitoare</button>
+                <button class="gallery-filter-btn" data-gallery-filter="dressinguri" data-lang-key="gallery.filter.dressinguri">Dressinguri</button>
+                <button class="gallery-filter-btn" data-gallery-filter="coridoare" data-lang-key="gallery.filter.coridoare">Coridoare</button>
+                <button class="gallery-filter-btn" data-gallery-filter="bai" data-lang-key="gallery.filter.bai">Băi</button>
+                <button class="gallery-filter-btn" data-gallery-filter="santier" data-lang-key="gallery.filter.santier">Șantier</button>
+                <button class="gallery-filter-btn" data-gallery-filter="demolari" data-lang-key="gallery.filter.demolari">Înainte de Renovare</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_010.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_010.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_011.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_011.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_012.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_012.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_013.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_013.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_014.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_014.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (5)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_015.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_015.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (6)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_016.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_016.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (7)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_017.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_017.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (8)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_018.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_018.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (9)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_019.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_019.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (10)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_020.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_020.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (11)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_021.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_021.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (12)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_022.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_022.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (13)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_023.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_023.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (14)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bucatarii">
+                    <img src="assets/photos/thumbs/finisaje-after/bucatarii/img_024.jpg" data-full="assets/photos/finisaje-after/bucatarii/img_024.jpeg" alt="Bucătărie finalizată - proiect Salinas Construct (15)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_008.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_008.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_025.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_025.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_026.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_026.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_027.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_027.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_028.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_028.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (5)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_029.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_029.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (6)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_030.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_030.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (7)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_031.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_031.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (8)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_032.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_032.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (9)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_033.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_033.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (10)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_034.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_034.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (11)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_035.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_035.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (12)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_036.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_036.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (13)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_037.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_037.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (14)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dormitoare">
+                    <img src="assets/photos/thumbs/finisaje-after/dormitoare/img_038.jpg" data-full="assets/photos/finisaje-after/dormitoare/img_038.jpeg" alt="Dormitor finalizat - proiect Salinas Construct (15)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_039.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_039.jpeg" alt="Dressing finalizat - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_040.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_040.jpeg" alt="Dressing finalizat - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_041.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_041.jpeg" alt="Dressing finalizat - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_042.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_042.jpeg" alt="Dressing finalizat - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_043.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_043.jpeg" alt="Dressing finalizat - proiect Salinas Construct (5)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_044.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_044.jpeg" alt="Dressing finalizat - proiect Salinas Construct (6)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_045.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_045.jpeg" alt="Dressing finalizat - proiect Salinas Construct (7)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_046.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_046.jpeg" alt="Dressing finalizat - proiect Salinas Construct (8)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_047.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_047.jpeg" alt="Dressing finalizat - proiect Salinas Construct (9)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_048.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_048.jpeg" alt="Dressing finalizat - proiect Salinas Construct (10)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_049.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_049.jpeg" alt="Dressing finalizat - proiect Salinas Construct (11)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_050.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_050.jpeg" alt="Dressing finalizat - proiect Salinas Construct (12)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_051.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_051.jpeg" alt="Dressing finalizat - proiect Salinas Construct (13)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_052.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_052.jpeg" alt="Dressing finalizat - proiect Salinas Construct (14)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_053.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_053.jpeg" alt="Dressing finalizat - proiect Salinas Construct (15)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="dressinguri">
+                    <img src="assets/photos/thumbs/finisaje-after/dressinguri/img_054.jpg" data-full="assets/photos/finisaje-after/dressinguri/img_054.jpeg" alt="Dressing finalizat - proiect Salinas Construct (16)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="coridoare">
+                    <img src="assets/photos/thumbs/finisaje-after/coridoare/img_001.jpg" data-full="assets/photos/finisaje-after/coridoare/img_001.jpeg" alt="Coridor finalizat - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="coridoare">
+                    <img src="assets/photos/thumbs/finisaje-after/coridoare/img_002.jpg" data-full="assets/photos/finisaje-after/coridoare/img_002.jpeg" alt="Coridor finalizat - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="coridoare">
+                    <img src="assets/photos/thumbs/finisaje-after/coridoare/img_003.jpg" data-full="assets/photos/finisaje-after/coridoare/img_003.jpeg" alt="Coridor finalizat - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="coridoare">
+                    <img src="assets/photos/thumbs/finisaje-after/coridoare/img_004.jpg" data-full="assets/photos/finisaje-after/coridoare/img_004.jpeg" alt="Coridor finalizat - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bai">
+                    <img src="assets/photos/thumbs/finisaje-after/bai/img_005.jpg" data-full="assets/photos/finisaje-after/bai/img_005.jpeg" alt="Baie finalizată - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bai">
+                    <img src="assets/photos/thumbs/finisaje-after/bai/img_006.jpg" data-full="assets/photos/finisaje-after/bai/img_006.jpeg" alt="Baie finalizată - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bai">
+                    <img src="assets/photos/thumbs/finisaje-after/bai/img_007.jpg" data-full="assets/photos/finisaje-after/bai/img_007.jpeg" alt="Baie finalizată - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="bai">
+                    <img src="assets/photos/thumbs/finisaje-after/bai/img_009.jpg" data-full="assets/photos/finisaje-after/bai/img_009.jpeg" alt="Baie finalizată - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_055.jpg" data-full="assets/photos/santier/img_055.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_056.jpg" data-full="assets/photos/santier/img_056.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_057.jpg" data-full="assets/photos/santier/img_057.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_058.jpg" data-full="assets/photos/santier/img_058.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_059.jpg" data-full="assets/photos/santier/img_059.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (5)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_060.jpg" data-full="assets/photos/santier/img_060.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (6)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_061.jpg" data-full="assets/photos/santier/img_061.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (7)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_062.jpg" data-full="assets/photos/santier/img_062.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (8)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_063.jpg" data-full="assets/photos/santier/img_063.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (9)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_064.jpg" data-full="assets/photos/santier/img_064.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (10)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_065.jpg" data-full="assets/photos/santier/img_065.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (11)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_066.jpg" data-full="assets/photos/santier/img_066.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (12)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_067.jpg" data-full="assets/photos/santier/img_067.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (13)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_068.jpg" data-full="assets/photos/santier/img_068.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (14)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_069.jpg" data-full="assets/photos/santier/img_069.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (15)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_070.jpg" data-full="assets/photos/santier/img_070.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (16)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_071.jpg" data-full="assets/photos/santier/img_071.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (17)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_072.jpg" data-full="assets/photos/santier/img_072.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (18)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_073.jpg" data-full="assets/photos/santier/img_073.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (19)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_074.jpg" data-full="assets/photos/santier/img_074.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (20)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_075.jpg" data-full="assets/photos/santier/img_075.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (21)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_076.jpg" data-full="assets/photos/santier/img_076.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (22)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_077.jpg" data-full="assets/photos/santier/img_077.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (23)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_078.jpg" data-full="assets/photos/santier/img_078.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (24)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_079.jpg" data-full="assets/photos/santier/img_079.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (25)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_080.jpg" data-full="assets/photos/santier/img_080.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (26)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_081.jpg" data-full="assets/photos/santier/img_081.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (27)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_082.jpg" data-full="assets/photos/santier/img_082.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (28)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_083.jpg" data-full="assets/photos/santier/img_083.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (29)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_084.jpg" data-full="assets/photos/santier/img_084.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (30)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_085.jpg" data-full="assets/photos/santier/img_085.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (31)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_086.jpg" data-full="assets/photos/santier/img_086.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (32)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_087.jpg" data-full="assets/photos/santier/img_087.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (33)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_088.jpg" data-full="assets/photos/santier/img_088.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (34)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_089.jpg" data-full="assets/photos/santier/img_089.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (35)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_090.jpg" data-full="assets/photos/santier/img_090.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (36)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_091.jpg" data-full="assets/photos/santier/img_091.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (37)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_092.jpg" data-full="assets/photos/santier/img_092.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (38)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_093.jpg" data-full="assets/photos/santier/img_093.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (39)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="santier">
+                    <img src="assets/photos/thumbs/santier/img_094.jpg" data-full="assets/photos/santier/img_094.jpeg" alt="Lucrări în șantier - proiect Salinas Construct (40)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_095.jpg" data-full="assets/photos/before-demolari/img_095.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (1)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_096.jpg" data-full="assets/photos/before-demolari/img_096.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (2)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_097.jpg" data-full="assets/photos/before-demolari/img_097.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (3)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_098.jpg" data-full="assets/photos/before-demolari/img_098.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (4)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_099.jpg" data-full="assets/photos/before-demolari/img_099.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (5)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_100.jpg" data-full="assets/photos/before-demolari/img_100.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (6)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_101.jpg" data-full="assets/photos/before-demolari/img_101.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (7)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_102.jpg" data-full="assets/photos/before-demolari/img_102.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (8)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_103.jpg" data-full="assets/photos/before-demolari/img_103.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (9)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_104.jpg" data-full="assets/photos/before-demolari/img_104.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (10)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_105.jpg" data-full="assets/photos/before-demolari/img_105.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (11)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_106.jpg" data-full="assets/photos/before-demolari/img_106.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (12)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_107.jpg" data-full="assets/photos/before-demolari/img_107.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (13)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_108.jpg" data-full="assets/photos/before-demolari/img_108.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (14)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_109.jpg" data-full="assets/photos/before-demolari/img_109.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (15)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_110.jpg" data-full="assets/photos/before-demolari/img_110.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (16)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_111.jpg" data-full="assets/photos/before-demolari/img_111.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (17)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_112.jpg" data-full="assets/photos/before-demolari/img_112.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (18)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_113.jpg" data-full="assets/photos/before-demolari/img_113.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (19)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_114.jpg" data-full="assets/photos/before-demolari/img_114.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (20)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_115.jpg" data-full="assets/photos/before-demolari/img_115.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (21)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_116.jpg" data-full="assets/photos/before-demolari/img_116.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (22)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_117.jpg" data-full="assets/photos/before-demolari/img_117.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (23)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_118.jpg" data-full="assets/photos/before-demolari/img_118.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (24)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_119.jpg" data-full="assets/photos/before-demolari/img_119.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (25)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_120.jpg" data-full="assets/photos/before-demolari/img_120.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (26)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_121.jpg" data-full="assets/photos/before-demolari/img_121.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (27)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_122.jpg" data-full="assets/photos/before-demolari/img_122.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (28)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_123.jpg" data-full="assets/photos/before-demolari/img_123.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (29)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_124.jpg" data-full="assets/photos/before-demolari/img_124.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (30)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_125.jpg" data-full="assets/photos/before-demolari/img_125.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (31)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_126.jpg" data-full="assets/photos/before-demolari/img_126.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (32)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_127.jpg" data-full="assets/photos/before-demolari/img_127.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (33)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_128.jpg" data-full="assets/photos/before-demolari/img_128.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (34)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_129.jpg" data-full="assets/photos/before-demolari/img_129.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (35)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_130.jpg" data-full="assets/photos/before-demolari/img_130.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (36)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_131.jpg" data-full="assets/photos/before-demolari/img_131.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (37)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_132.jpg" data-full="assets/photos/before-demolari/img_132.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (38)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_133.jpg" data-full="assets/photos/before-demolari/img_133.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (39)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_134.jpg" data-full="assets/photos/before-demolari/img_134.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (40)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_135.jpg" data-full="assets/photos/before-demolari/img_135.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (41)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_136.jpg" data-full="assets/photos/before-demolari/img_136.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (42)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_137.jpg" data-full="assets/photos/before-demolari/img_137.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (43)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_138.jpg" data-full="assets/photos/before-demolari/img_138.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (44)" class="gallery-image" loading="lazy">
+                </div>
+                <div class="gallery-item" data-gallery-category="demolari">
+                    <img src="assets/photos/thumbs/before-demolari/img_139.jpg" data-full="assets/photos/before-demolari/img_139.jpeg" alt="Spațiu înainte de renovare - proiect Salinas Construct (45)" class="gallery-image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
@@ -285,6 +735,7 @@
 
             <div class="team-section">
                 <h3 class="team-title" data-lang-key="about.team.title">Echipa Noastră</h3>
+                <p class="team-subtitle" data-lang-key="about.team.subtitle">O afacere de familie, condusă cu pasiune și implicare directă în fiecare proiect</p>
                 <div class="team-grid">
                     <div class="team-member">
                         <div class="team-photo placeholder-small">
@@ -293,8 +744,8 @@
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </div>
-                        <h4>Ing. Alexandru Salinas</h4>
-                        <p class="role">Director General & Inginer Șef</p>
+                        <h4>Răzvan Șerbănescu</h4>
+                        <p class="role" data-lang-key="about.team.razvan.role">Fondator & Director General</p>
                     </div>
                     <div class="team-member">
                         <div class="team-photo placeholder-small">
@@ -303,8 +754,8 @@
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </div>
-                        <h4>Maria Popescu</h4>
-                        <p class="role">Manager Proiecte</p>
+                        <h4>Solomon Șerbănescu</h4>
+                        <p class="role" data-lang-key="about.team.solomon.role">Asociat</p>
                     </div>
                     <div class="team-member">
                         <div class="team-photo placeholder-small">
@@ -313,18 +764,8 @@
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
                         </div>
-                        <h4>Ion Georgescu</h4>
-                        <p class="role">Maestru Constructor</p>
-                    </div>
-                    <div class="team-member">
-                        <div class="team-photo placeholder-small">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                        </div>
-                        <h4>Andrei Dumitrescu</h4>
-                        <p class="role">Electrician Autorizat</p>
+                        <h4>Filip Șerbănescu</h4>
+                        <p class="role" data-lang-key="about.team.filip.role">Asociat</p>
                     </div>
                 </div>
             </div>
@@ -332,36 +773,8 @@
     </section>
 
     <!-- Certifications Section -->
-    <section class="certifications" id="certifications">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-lang-key="cert.title">Certificări și Parteneri</h2>
-                <p class="section-subtitle" data-lang-key="cert.subtitle">Calitate garantată prin certificări și colaborări de prestigiu</p>
-            </div>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-icon">✓</div>
-                    <h4>ISO 9001:2015</h4>
-                    <p data-lang-key="cert.iso">Sistem Management Calitate</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">✓</div>
-                    <h4>ANRE</h4>
-                    <p data-lang-key="cert.anre">Autorizație Instalații Electrice</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">✓</div>
-                    <h4>ISCIR</h4>
-                    <p data-lang-key="cert.iscir">Instalații Termice Certificate</p>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon">✓</div>
-                    <h4>Partener Premium</h4>
-                    <p data-lang-key="cert.premium">Materiale de Construcție</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Certifications kept marginal, not a full section: owner isn't certain the certifications
+         are current/valid, so they're a small muted footer line instead - see .cert-marginal below. -->
 
     <!-- Blog Section -->
     <section class="blog" id="blog">
@@ -377,7 +790,7 @@
                         <span class="blog-date">15 Ianuarie 2026</span>
                         <h3>Top 5 Tendințe în Renovări pentru 2026</h3>
                         <p>Descoperă cele mai noi tendințe în design interior și renovări care vor domina anul acesta...</p>
-                        <a href="#" class="read-more" data-lang-key="blog.readmore">Citește mai mult →</a>
+                        <span class="read-more" data-lang-key="blog.comingsoon" aria-disabled="true">În curând</span>
                     </div>
                 </article>
 
@@ -387,7 +800,7 @@
                         <span class="blog-date">10 Ianuarie 2026</span>
                         <h3>Cum Să Alegi Materialele Potrivite pentru Renovare</h3>
                         <p>Ghid complet pentru selectarea materialelor de calitate care să reziste în timp...</p>
-                        <a href="#" class="read-more" data-lang-key="blog.readmore">Citește mai mult →</a>
+                        <span class="read-more" data-lang-key="blog.comingsoon" aria-disabled="true">În curând</span>
                     </div>
                 </article>
 
@@ -397,7 +810,7 @@
                         <span class="blog-date">5 Ianuarie 2026</span>
                         <h3>Eficiență Energetică: Economisește prin Instalații Smart</h3>
                         <p>Descoperă cum sistemele inteligente pot reduce costurile și crește confortul...</p>
-                        <a href="#" class="read-more" data-lang-key="blog.readmore">Citește mai mult →</a>
+                        <span class="read-more" data-lang-key="blog.comingsoon" aria-disabled="true">În curând</span>
                     </div>
                 </article>
             </div>
@@ -421,7 +834,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>Adresă</h4>
+                            <h3>Adresă</h3>
                             <p>Str. Constructorilor nr. 45<br>București, Sector 2, România</p>
                         </div>
                     </div>
@@ -432,7 +845,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>Telefon</h4>
+                            <h3>Telefon</h3>
                             <p>+40 721 234 567<br>+40 732 345 678</p>
                         </div>
                     </div>
@@ -444,7 +857,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>Email</h4>
+                            <h3>Email</h3>
                             <p>office@salinasconstruct.ro<br>contact@salinasconstruct.ro</p>
                         </div>
                     </div>
@@ -456,7 +869,7 @@
                             </svg>
                         </div>
                         <div>
-                            <h4>Program</h4>
+                            <h3>Program</h3>
                             <p>Luni - Vineri: 08:00 - 18:00<br>Sâmbătă: 09:00 - 14:00</p>
                         </div>
                     </div>
@@ -475,11 +888,12 @@
                         <label for="phone" data-lang-key="contact.form.phone">Telefon</label>
                     </div>
                     <div class="form-group">
+                        <label for="service" class="sr-only" data-lang-key="contact.form.service">Selectați serviciul</label>
                         <select id="service" required>
                             <option value="" disabled selected data-lang-key="contact.form.service">Selectați serviciul</option>
                             <option value="renovation">Renovări</option>
                             <option value="interior">Finisaje Interioare</option>
-                            <option value="electrical">Instalații Electrice</option>
+                            <option value="waterproofing">Hidroizolații</option>
                             <option value="plumbing">Instalații Sanitare</option>
                             <option value="roofing">Instalații Acoperișuri</option>
                             <option value="other">Altele</option>
@@ -525,7 +939,7 @@
                     <ul>
                         <li><a href="#services">Renovări</a></li>
                         <li><a href="#services">Finisaje Interioare</a></li>
-                        <li><a href="#services">Instalații Electrice</a></li>
+                        <li><a href="#services">Hidroizolații</a></li>
                         <li><a href="#services">Instalații Sanitare</a></li>
                         <li><a href="#services">Instalații Acoperișuri</a></li>
                     </ul>
@@ -535,7 +949,7 @@
                     <ul>
                         <li><a href="#about">Despre Noi</a></li>
                         <li><a href="#portfolio">Portofoliu</a></li>
-                        <li><a href="#certifications">Certificări</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -543,6 +957,7 @@
                 <div class="footer-section">
                     <h4 data-lang-key="footer.legal">Informații Legale</h4>
                     <ul>
+                        <!-- TODO(owner): confirm real CUI and registration number before launch, current values are placeholders -->
                         <li>CUI: RO12345678</li>
                         <li>J23/1234/2015</li>
                         <li><a href="#">Termeni și Condiții</a></li>
@@ -551,6 +966,7 @@
                     </ul>
                 </div>
             </div>
+            <p class="cert-marginal" data-lang-key="cert.marginal">Materiale de construcție premium, de la parteneri verificați.</p>
             <div class="footer-bottom">
                 <p>&copy; 2026 Salinas Construct SRL. <span data-lang-key="footer.rights">Toate drepturile rezervate.</span></p>
             </div>
@@ -570,6 +986,30 @@
                 <!-- Content will be inserted dynamically -->
             </div>
         </div>
+    </div>
+
+    <!-- Gallery Lightbox: full-res viewer for the Gallery section grid, kept separate from #serviceModal -->
+    <div id="galleryLightbox" class="gallery-lightbox">
+        <button class="gallery-lightbox-close" id="galleryLightboxClose" aria-label="Închide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <button class="gallery-lightbox-nav gallery-lightbox-prev" id="galleryLightboxPrev" aria-label="Imaginea anterioară">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <div class="gallery-lightbox-content">
+            <img id="galleryLightboxImage" src="" alt="">
+            <p class="gallery-lightbox-counter" id="galleryLightboxCounter"></p>
+        </div>
+        <button class="gallery-lightbox-nav gallery-lightbox-next" id="galleryLightboxNext" aria-label="Imaginea următoare">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
     </div>
 
     <script src="script.js"></script>

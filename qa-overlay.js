@@ -166,19 +166,31 @@
     if (p) p.style.display = p.style.display === 'none' ? 'flex' : 'none';
   }
 
-  // Keyboard shortcut Alt+Q
-  document.addEventListener('keydown', e => {
-    if (e.altKey && e.key.toLowerCase() === 'q') toggleQA();
-  });
+  // Gate: only activate on local dev hosts. Hidden in production, visible for review.
+  // Deliberately NOT OR'd with a public query param (e.g. ?qa=1) - that would let any
+  // visitor to the live site unlock this panel, since this script loads unconditionally
+  // on every page load and is fully readable via view-source.
+  function isQAEnabled() {
+    const host = location.hostname;
+    const isLocalHost = host === 'localhost' || host === '127.0.0.1' || host.startsWith('192.168.');
+    return isLocalHost;
+  }
 
-  // Floating toggle button
-  const fab = document.createElement('button');
-  fab.id = 'qaFab';
-  fab.title = 'QA Panel (Alt+Q)';
-  fab.textContent = 'QA';
-  fab.addEventListener('click', toggleQA);
-  document.body.appendChild(fab);
+  if (isQAEnabled()) {
+    // Keyboard shortcut Alt+Q
+    document.addEventListener('keydown', e => {
+      if (e.altKey && e.key.toLowerCase() === 'q') toggleQA();
+    });
 
-  // Expose for console use
-  window.runQA = toggleQA;
+    // Floating toggle button
+    const fab = document.createElement('button');
+    fab.id = 'qaFab';
+    fab.title = 'QA Panel (Alt+Q)';
+    fab.textContent = 'QA';
+    fab.addEventListener('click', toggleQA);
+    document.body.appendChild(fab);
+
+    // Expose for console use
+    window.runQA = toggleQA;
+  }
 })();
