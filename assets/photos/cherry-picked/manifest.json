@@ -1,0 +1,114 @@
+[
+  {
+    "file": "01-inainte-structura-decopertata",
+    "stage": "inainte",
+    "stageLabel": "ÎNAINTE",
+    "title": "Structura decopertată",
+    "caption": "Pereții sunt decopertați până la cărămidă, iar instalațiile vechi rămân la vedere. Așa arată punctul de plecare al oricărei renovări serioase.",
+    "alt": "Perete decopertat până la cărămidă cu instalații vechi expuse, înainte de renovare"
+  },
+  {
+    "file": "02-inainte-consolidare",
+    "stage": "inainte",
+    "stageLabel": "ÎNAINTE",
+    "title": "Consolidare structurală",
+    "caption": "Înainte de orice finisaj, structura este verificată și consolidată cu grinzi metalice acolo unde este nevoie.",
+    "alt": "Grinzi metalice de consolidare montate pe tavan, structură expusă"
+  },
+  {
+    "file": "03-inainte-baie-veche",
+    "stage": "inainte",
+    "stageLabel": "ÎNAINTE",
+    "title": "Baia veche",
+    "caption": "Cadă și instalații sanitare de generație veche, complet uzate — una dintre băile care urmau să fie refăcute integral.",
+    "alt": "Baie veche cu cadă albastră demodată, înainte de renovare"
+  },
+  {
+    "file": "04-inainte-pardoseala-veche",
+    "stage": "inainte",
+    "stageLabel": "ÎNAINTE",
+    "title": "Pardoseala originală",
+    "caption": "Mozaicul original de pe hol, păstrat ca reper de culoare pentru noua pardoseală ce avea să fie turnată.",
+    "alt": "Hol cu pardoseală de mozaic vechi înainte de renovare"
+  },
+  {
+    "file": "05-santier-electrice",
+    "stage": "santier",
+    "stageLabel": "ÎN LUCRU",
+    "title": "Instalație electrică nouă",
+    "caption": "Canale noi în cartongips pentru cablarea electrică — totul recablat de la zero, cu circuite și prize premium.",
+    "alt": "Canale de cabluri electrice montate în pereți de cartongips"
+  },
+  {
+    "file": "06-santier-instalatii-sanitare",
+    "stage": "santier",
+    "stageLabel": "ÎN LUCRU",
+    "title": "Instalații sanitare și termice",
+    "caption": "Centrala termică montată pe perete decopertat, alături de instalațiile sanitare noi, gata pentru finisaje.",
+    "alt": "Centrală termică montată pe perete în lucru, instalații sanitare noi"
+  },
+  {
+    "file": "07-santier-montaj-mozaic",
+    "stage": "santier",
+    "stageLabel": "ÎN LUCRU",
+    "title": "Montaj mozaic cu nivelă laser",
+    "caption": "Montajul pardoselii de mozaic alb-negru se face cu nivelă laser, pentru un rezultat perfect aliniat pe fiecare rând.",
+    "alt": "Muncitor montând pardoseală de mozaic alb-negru cu nivelă laser"
+  },
+  {
+    "file": "08-santier-coridor",
+    "stage": "santier",
+    "stageLabel": "ÎN LUCRU",
+    "title": "Coridorul prinde formă",
+    "caption": "Tencuieli finalizate, tavan pregătit — spațiul începe să capete forma finală, cu doar câteva etape până la predare.",
+    "alt": "Coridor în lucru, tencuit și pregătit pentru finisaje"
+  },
+  {
+    "file": "09-dupa-coridor",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Coridor finalizat",
+    "caption": "Rezultatul final: coridor elegant cu mozaic alb-negru, exact pe linia stilului clasic ales de la început.",
+    "alt": "Coridor finalizat cu pardoseală de mozaic alb-negru"
+  },
+  {
+    "file": "10-dupa-baie",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Baie modernă",
+    "caption": "Faianță bicromă, oglindă cu iluminat LED și mobilier suspendat — baia veche transformată complet.",
+    "alt": "Baie modernă finalizată cu faianță bicromă și oglindă LED"
+  },
+  {
+    "file": "11-dupa-baie-dubla",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Baie cu lavoar dublu",
+    "caption": "Faianță premium în nuanță de albastru, lavoare duble și mobilier pe comandă — o baie de nivel hotelier.",
+    "alt": "Baie cu lavoare duble și faianță albastră premium, finalizată"
+  },
+  {
+    "file": "12-dupa-bucatarie",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Bucătărie completă",
+    "caption": "Bucătărie modernă, complet utilată, cu electrocasnice integrate și pardoseală de mozaic asortată cu holul.",
+    "alt": "Bucătărie modernă finalizată cu electrocasnice integrate"
+  },
+  {
+    "file": "13-dupa-dormitor",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Dormitor elegant",
+    "caption": "Candelabru auriu, parchet englezesc și un ambient cald — dormitorul finalizat, gata de predare către client.",
+    "alt": "Dormitor elegant finalizat cu candelabru auriu și parchet englezesc"
+  },
+  {
+    "file": "14-dupa-dressing",
+    "stage": "dupa",
+    "stageLabel": "DUPĂ",
+    "title": "Dressing pe colț",
+    "caption": "Dressing integrat pe colț, proiectat la milimetru pentru a folosi fiecare centimetru din spațiul disponibil.",
+    "alt": "Dressing pe colț finalizat, mobilier integrat pe comandă"
+  }
+]
